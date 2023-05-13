@@ -2,6 +2,10 @@ using System;
 
 class TravelDestinations {
     static void Main(string[] args) {
+    
+    bool shouldContinue = true;
+    while (shouldContinue) {
+    
         Console.WriteLine("Where do you like to travel?:\n");
         
         Console.WriteLine("1. Beach");
