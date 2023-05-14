@@ -6,7 +6,7 @@ class TravelDestinations {
     bool shouldContinue = true;
     while (shouldContinue) {
     
-        Console.WriteLine("Where do you like to travel?:\n");
+        Console.WriteLine("Hi! Welcome to Destination Pciker. Where do you like to travel?:\n");
         
         Console.WriteLine("1. Beach");
         Console.WriteLine("2. National Park");
