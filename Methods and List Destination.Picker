@@ -1,0 +1,179 @@
+using System;
+using System.Collections.Generic;
+
+class TravelDestinations {
+    static void Main(string[] args) {
+        TravelPicker();
+    }
+
+    static void TravelPicker() {
+        bool shouldContinue = true;
+        while (shouldContinue) {
+            Console.WriteLine("John Paulo B. Lumagbas");
+            Console.WriteLine("Hi! Welcome to Destination Picker. Where do you like to travel?:\n");
+
+            Console.WriteLine("1. Beach");
+            Console.WriteLine("2. National Park");
+            Console.WriteLine("3. City");
+            Console.WriteLine("4. Exit");
+
+            Console.WriteLine("\nEnter the number of a destination to learn more: ");
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            switch (choice) {
+                case 1:
+                    DisplayBeachDestinations();
+                    break;
+                case 2:
+                    DisplayNationalParkDestinations();
+                    break;
+                case 3:
+                    DisplayCityDestinations();
+                    break;
+                case 4:
+                    shouldContinue = false; // Exit the program
+                    Console.WriteLine("Thank you for using my code!");
+                    break;
+                default:
+                    Console.WriteLine("Invalid selection. Please try again.");
+                    break;
+            }
+        }
+    }
+
+    static void DisplayBeachDestinations() {
+        Console.WriteLine("\nHere are the list of beaches to travel: ");
+        Console.WriteLine("1. Boracay, Philippines");
+        Console.WriteLine("2. Maldives");
+        Console.WriteLine("3. Palawan, Philippines");
+
+        Console.WriteLine("\nEnter a number to see some hotels available: ");
+
+        int innerChoice = Convert.ToInt32(Console.ReadLine());
+
+        List<string> beachHotels = new List<string>();
+
+        switch (innerChoice) {
+            case 1:
+                beachHotels.Add("Aqua Boracay");
+                beachHotels.Add("Feliz Hotel Boracay");
+                beachHotels.Add("Crimson Resort and Spa Boracay");
+                beachHotels.Add("Coast Boracay");
+                beachHotels.Add("The Strand Boutique Resort");
+                break;
+            case 2:
+                beachHotels.Add("Kagi Maldives Spa Island");
+                beachHotels.Add("Sun Siyam Iru Fushi Maldives");
+                beachHotels.Add("Villa Nautica");
+                beachHotels.Add("Sun Siyam Olhuveli");
+                beachHotels.Add("Meeru Island Resort & Spa");
+                break;
+            case 3:
+                beachHotels.Add("Seda Lio");
+                beachHotels.Add("Last Frontier Beach Resort");
+                beachHotels.Add("Lime Resort El Nido");
+                beachHotels.Add("Mantiloc Resort");
+                beachHotels.Add("Cauayan Resort Island");
+                break;
+            default:
+                Console.WriteLine("Invalid choice.");
+                break;
+        }
+
+        Console.WriteLine("\nHere are the Luxury Hotels that you should check out:");
+        foreach (string hotel in beachHotels) {
+            Console.WriteLine("- " + hotel);
+        }
+    }
+
+    static void DisplayNationalParkDestinations() {
+        Console.WriteLine("\nHere are the list of national parks to travel:");
+        Console.WriteLine("1. Yellowstone National Park, USA");
+        Console.WriteLine("2. Banff National Park, Canada");
+        Console.WriteLine("3. Plitvice Lakes National Park, Croatia");
+
+        Console.WriteLine("\nEnter a number to see some hotels available:");
+
+        int choice = int.Parse(Console.ReadLine());
+
+        List<string> parkHotels = new List<string>();
+
+        switch (choice) {
+            case 1:
+                parkHotels.Add("Old Faithful Inn");
+                parkHotels.Add("Lakes Yellowstone Hotel and Cottages");
+                parkHotels.Add("Canyon Lodge and Cabins");
+                parkHotels.Add("Yellowstone Park Hotel");
+                parkHotels.Add("Kelly Inn-West Yellowstone");
+                break;
+            case 2:
+                parkHotels.Add("Fairmont Banff Spring");
+                parkHotels.Add("Rimrock Resort Hotel");
+                parkHotels.Add("Charltons Banff");
+                parkHotels.Add("Moose Hotel and Suites");
+                parkHotels.Add("Fox Hotel and Suites");
+                break;
+            case 3:
+                parkHotels.Add("Villa Sumrak");
+                parkHotels.Add("Etno Garden Exclusive Rooms");
+                parkHotels.Add("Guesthouse Lower Lakes");
+                parkHotels.Add("B&B Plitvica Creek");
+                parkHotels.Add("Villa Jezerka");
+                break;
+            default:
+                Console.WriteLine("Invalid choice.");
+                break;
+        }
+
+        Console.WriteLine("\nHere are the Luxury Hotels that you should check out:");
+        foreach (string hotel in parkHotels) {
+            Console.WriteLine("- " + hotel);
+        }
+    }
+
+    static void DisplayCityDestinations() {
+        Console.WriteLine("\nHere are the list of cities to travel: ");
+        Console.WriteLine("1. New York City, USA");
+        Console.WriteLine("2. Tokyo, Japan");
+        Console.WriteLine("3. Dubai, UAE");
+
+        Console.WriteLine("\nEnter a number to see the description: ");
+
+        int choice = int.Parse(Console.ReadLine());
+
+        List<string> cityHotels = new List<string>();
+
+        switch (choice) {
+            case 1:
+                cityHotels.Add("Gansevoort Meatpacking NYC");
+                cityHotels.Add("Moxy NYC Times Square");
+                cityHotels.Add("The Westin New York at Times Square");
+                cityHotels.Add("The Knickerbocker");
+                cityHotels.Add("Royalton Park Avenue");
+                break;
+            case 2:
+                cityHotels.Add("Mimaru Tokyo Akasaka");
+                cityHotels.Add("Hotel Niwa Tokyo");
+                cityHotels.Add("Sheraton Miyako Hotel Tokyo");
+                cityHotels.Add("The Gate Hotel Tokyo by Hulic");
+                cityHotels.Add("Park Hotel Tokyo");
+                break;
+            case 3:
+                cityHotels.Add("Hilton Dubai Al Habtoor City");
+                cityHotels.Add("Burj Al Arab");
+                cityHotels.Add("Atlantis The Palm");
+                cityHotels.Add("Palace Downtown");
+                cityHotels.Add("Address Beach Resort");
+                break;
+            default:
+                Console.WriteLine("Invalid choice.");
+                break;
+        }
+
+        Console.WriteLine("\nHere are the Luxury Hotels that you should check out:");
+        foreach (string hotel in cityHotels) {
+            Console.WriteLine("- " + hotel);
+        }
+    }
+}
