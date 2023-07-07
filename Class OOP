@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Ling;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace John Paulo
+{
+	class Program
+    {
+	    static void Main(string[] args)
+	    {
+
+public class Hotel
+{
+	public HOtel()
+
+	class Hotel
+	{
+		public string name;
+		public string location;
+	}
+		    Hotel hotel1 = new Hotel();
+		    hotel1.name = "Aqua Boracay";
+		    hotel1.location = "Boracay, Philippines";
+
+		    Console.WriteLine(hotel1.name);
+
+		     Console.ReadLine();
+	    }
+	 }
+}
+
